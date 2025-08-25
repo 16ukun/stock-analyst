@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: stock-analyst-mvp
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:stockdb}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+  flyway:
+    enabled: true
+
+server:
+  port: ${PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+security:
+  jwt:
+    issuer: stock-analyst-mvp
+    secret: ${JWT_SECRET:dev-secret-change-me}
+    expirationMinutes: 60
+
+alphaVantage:
+  apiKey: ${ALPHA_VANTAGE_API_KEY:}
