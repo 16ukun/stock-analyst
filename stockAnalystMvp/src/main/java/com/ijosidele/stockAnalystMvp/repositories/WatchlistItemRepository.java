@@ -8,4 +8,5 @@ import com.ijosidele.stockAnalystMvp.models.WatchlistItem;
 
 public interface WatchlistItemRepository extends JpaRepository<WatchlistItem, Long> {
 	  Optional<WatchlistItem> findByWatchlist_IdAndTickerIgnoreCase(Long watchlistId, String ticker);
+	  void deleteByWatchlistIdAndTicker(Long watchlistId, String ticker);
 }
