@@ -1,4 +1,4 @@
-package com.ijosidele.stockAnalystMvp.config;
+package com.ijosidele.stockAnalystMvp.dto;
 
 import java.time.Instant;
 import java.util.List;
