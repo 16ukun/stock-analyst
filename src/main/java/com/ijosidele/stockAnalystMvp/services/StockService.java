@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import com.ijosidele.stockAnalystMvp.models.StockCache;
 import com.ijosidele.stockAnalystMvp.repositories.StockCacheRepository;
 
+@Service
 public class StockService {
 	  private final StockCacheRepository cache;
 	  private final RestClient http = RestClient.create();
