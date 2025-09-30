@@ -14,6 +14,7 @@ import com.ijosidele.stockAnalystMvp.repositories.WatchlistRepository;
 import jakarta.transaction.Transactional;
 
 @Service
+@Transactional
 public class WatchlistService {
 	  private final UserRepository userRepo;
 	  private final WatchlistRepository watchlistRepository;
